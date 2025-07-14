@@ -1,103 +1,84 @@
-import Image from "next/image";
+'use client';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Linkedin } from "lucide-react";
 
-export default function Home() {
+export default function Portfolio() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+    <main className="max-w-4xl mx-auto p-6 space-y-8">
+      <section className="text-center">
+        <h1 className="text-4xl font-bold">Azevedo Gomes</h1>
+        <p className="text-lg text-gray-600">
+          Security and Network Engineer with 3+ years of experience in firewall management, IDS, and automated
+          network processes.
+        </p>
+        <div className="flex justify-center gap-4 mt-4">
+          <a href="https://www.linkedin.com/in/azevedo-gomes/" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">
+              <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+            </Button>
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="mailto:azegomes@icloud.com">
+            <Button variant="outline">Email</Button>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Work Experience</h2>
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h3 className="font-semibold">Security & Network Engineer</h3>
+            <p className="text-sm text-gray-500">Charterhouse Voice & Data | May 2023 – Present</p>
+            <ul className="list-disc list-inside text-sm">
+              <li>Reduced unauthorised access attempts by 25% through enhanced firewall configurations.</li>
+              <li>Deployed IDS systems identifying 10+ critical vulnerabilities annually.</li>
+              <li>Developed response plans cutting threat resolution time by 50%.</li>
+              <li>Implemented proactive alerting, reducing network downtime by 20%.</li>
+              <li>Led 10+ major network projects with timely deployments and strong security.</li>
+              <li>Executed disaster recovery strategies achieving 100% continuity in simulations.</li>
+            </ul>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 space-y-2">
+            <h3 className="font-semibold">Technical Support Analyst</h3>
+            <p className="text-sm text-gray-500">Pentesec LTD | Oct 2021 – May 2023</p>
+            <ul className="list-disc list-inside text-sm">
+              <li>Reduced unauthorised access incidents by 30% with strategic perimeter security.</li>
+              <li>Improved threat detection by 15% via refined security protocols.</li>
+              <li>Applied Application Control policies reducing endpoint threats by 40%.</li>
+              <li>Managed 100+ monthly network issues ensuring business continuity.</li>
+              <li>Reinforced cybersecurity frameworks, reducing incidents by 15%.</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Education</h2>
+        <Card>
+          <CardContent className="p-4">
+            <h3 className="font-semibold">BSc Computer Science - First-Class Honours</h3>
+            <p className="text-sm text-gray-500">Nottingham Trent University | Sep 2017 – Oct 2021</p>
+            <p className="text-sm">Relevant coursework: Networking, Cybersecurity, Programming, System Administration</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Skills & Certifications</h2>
+        <Card>
+          <CardContent className="p-4 space-y-1 text-sm">
+            <p><strong>Technical Skills:</strong> Firewall Configuration, IDS, Vulnerability Assessments, Disaster Recovery, TCP/IP, FortiManager, Routing Protocols (BGP, OSPF, ECMP)</p>
+            <p><strong>Certifications:</strong> CCSM, CCTE, CCSE R81, CompTIA Security+</p>
+            <p><strong>Soft Skills:</strong> Incident Response, Risk Management, Compliance, Collaboration, Communication</p>
+            <p><strong>Volunteering:</strong> 10 hours/month at Organic Soul Foundation</p>
+            <p><strong>Visa:</strong> EU Settlement Status (Eligible to work in the UK)</p>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
   );
 }
